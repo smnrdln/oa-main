@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Open Academy is a minimal front page for browsing available learning modules. The live module today is the electronics and PCB design trainer.">
+        content="Open Academy is a static front page for open technical learning modules. The current live module is the Electronics and PCB Design Trainer.">
     <meta name="keywords" content="Open Academy, learning modules, PCB design, electronics, engineering education">
     <meta name="author" content="Saman Ardalan">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="google-adsense-account" content="ca-pub-4757211359193207">
     <meta name="theme-color" content="#0b1220">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Open Academy">
     <meta property="og:description"
-        content="Browse the available Open Academy learning modules and launch the live PCB learning track.">
+        content="Browse Open Academy learning modules and launch the live Electronics and PCB Design Trainer.">
     <meta property="og:site_name" content="Open Academy">
     <title>Open Academy</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4757211359193207"
@@ -21,9 +23,9 @@
         :root {
             --bg: #0b1220;
             --bg-soft: rgba(12, 20, 37, 0.84);
-            --panel: rgba(18, 28, 49, 0.86);
-            --panel-strong: rgba(13, 20, 35, 0.98);
-            --line: rgba(148, 163, 184, 0.16);
+            --panel: rgba(18, 28, 49, 0.9);
+            --panel-strong: rgba(12, 19, 34, 0.98);
+            --line: rgba(148, 163, 184, 0.18);
             --text: #edf2ff;
             --muted: #9aa9c4;
             --accent: #f59e0b;
@@ -33,7 +35,7 @@
             --radius-lg: 28px;
             --radius-md: 22px;
             --radius-sm: 14px;
-            --content-width: 1040px;
+            --content-width: 1080px;
         }
 
         * {
@@ -137,12 +139,18 @@
             padding: 14px 0 56px;
         }
 
-        .hero {
-            padding: 42px;
+        .hero,
+        .section-card,
+        .module-card,
+        .footer-panel {
             border: 1px solid var(--line);
             border-radius: var(--radius-lg);
-            background: linear-gradient(180deg, rgba(13, 20, 35, 0.95), rgba(12, 20, 37, 0.84));
+            background: linear-gradient(180deg, rgba(13, 20, 35, 0.95), rgba(12, 20, 37, 0.86));
             box-shadow: var(--shadow);
+        }
+
+        .hero {
+            padding: 42px;
         }
 
         .eyebrow {
@@ -167,15 +175,15 @@
         }
 
         .hero h1 {
-            max-width: 10ch;
+            max-width: 11ch;
             margin-top: 18px;
-            font-size: clamp(2.7rem, 8vw, 5rem);
+            font-size: clamp(2.8rem, 8vw, 5rem);
             line-height: 0.95;
             letter-spacing: -0.05em;
         }
 
         .hero p {
-            max-width: 62ch;
+            max-width: 66ch;
             margin-top: 18px;
             color: var(--muted);
             font-size: 1.02rem;
@@ -236,6 +244,68 @@
             margin-top: 26px;
         }
 
+        .section-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 18px;
+        }
+
+        .section-card {
+            padding: 26px;
+        }
+
+        .section-card h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            letter-spacing: -0.04em;
+        }
+
+        .section-card p {
+            margin-top: 14px;
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .bullet-list {
+            margin: 18px 0 0;
+            padding-left: 18px;
+            color: var(--muted);
+        }
+
+        .bullet-list li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .stat-card {
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .stat-card strong,
+        .stat-card span {
+            display: block;
+        }
+
+        .stat-card strong {
+            font-size: 1.7rem;
+            letter-spacing: -0.03em;
+        }
+
+        .stat-card span {
+            margin-top: 6px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
         .section-head {
             display: flex;
             align-items: end;
@@ -250,7 +320,7 @@
         }
 
         .section-head p {
-            max-width: 46ch;
+            max-width: 50ch;
             color: var(--muted);
             line-height: 1.7;
         }
@@ -260,17 +330,9 @@
             gap: 18px;
         }
 
-        .module-card,
-        .coming-soon {
-            border: 1px solid var(--line);
-            border-radius: var(--radius-md);
-            background: var(--panel);
-            box-shadow: var(--shadow);
-        }
-
         .module-card {
             display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+            grid-template-columns: minmax(0, 1.2fr) minmax(250px, 0.8fr);
             gap: 18px;
             padding: 26px;
         }
@@ -342,46 +404,115 @@
             line-height: 1.65;
         }
 
-        .coming-soon {
-            padding: 20px 22px;
-            background: rgba(255, 255, 255, 0.03);
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
         }
 
-        .coming-soon p {
+        .mini-card {
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: var(--shadow);
+        }
+
+        .mini-card h3 {
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .mini-card p {
+            margin-top: 12px;
             color: var(--muted);
             line-height: 1.7;
         }
 
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .faq-item {
+            padding: 22px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, 0.04);
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item h3 {
+            font-size: 1.05rem;
+        }
+
+        .faq-item p {
+            margin-top: 10px;
+            color: var(--muted);
+            line-height: 1.68;
+        }
+
         footer {
-            padding-top: 24px;
+            margin-top: 26px;
+        }
+
+        .footer-panel {
+            padding: 24px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr 0.8fr;
+            gap: 18px;
+        }
+
+        .footer-column h3 {
+            font-size: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .footer-column p,
+        .footer-column a {
+            display: block;
+            margin-top: 10px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .footer-column a:hover,
+        .footer-column a:focus-visible {
+            color: var(--text);
+        }
+
+        .footer-bottom {
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(148, 163, 184, 0.12);
             color: var(--muted);
             font-size: 0.92rem;
         }
 
-        .footer-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 18px;
-            flex-wrap: wrap;
-            padding-top: 18px;
-            border-top: 1px solid rgba(148, 163, 184, 0.12);
-        }
-
-        @media (max-width: 860px) {
-            .module-card {
+        @media (max-width: 920px) {
+            .section-grid,
+            .module-card,
+            .card-grid,
+            .faq-grid,
+            .footer-grid {
                 grid-template-columns: 1fr;
             }
 
-            .section-head,
             .site-header .shell,
-            .footer-row {
+            .section-head {
                 align-items: flex-start;
                 flex-direction: column;
             }
 
-            .hero {
-                padding: 28px;
+            .hero,
+            .section-card,
+            .module-card,
+            .footer-panel {
+                padding: 24px;
             }
         }
 
@@ -398,6 +529,10 @@
             .button {
                 width: 100%;
             }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -409,43 +544,88 @@
                 <div class="brand-mark">OA</div>
                 <div class="brand-copy">
                     <strong>Open Academy</strong>
-                    <span>Learning modules</span>
+                    <span>Technical learning modules</span>
                 </div>
             </a>
-            <div class="status">1 module live</div>
+            <div class="status">1 live module</div>
         </div>
     </header>
 
     <main id="top">
         <div class="shell">
             <section class="hero" aria-label="Open Academy overview">
-                <div class="eyebrow">General index</div>
-                <h1>Browse the available learning modules.</h1>
+                <div class="eyebrow">Open technical learning</div>
+                <h1>Learn through real modules, not marketing pages.</h1>
                 <p>
-                    Open Academy is the front page for the learning system. It stays general and minimal, while each
-                    module lives on its own dedicated experience. Right now the active module is the PCB learning app.
+                    Open Academy is a static front page for open learning modules in electronics and engineering. Each
+                    module is published as its own focused experience. The current live module is the Electronics and
+                    PCB Design Trainer.
                 </p>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="https://pcb.openacademy.space/">Open PCB module</a>
-                    <a class="button button-secondary" href="#modules">View modules</a>
+                    <a class="button button-primary" href="https://pcb.openacademy.space/">Open the PCB trainer</a>
+                    <a class="button button-secondary" href="#modules">Browse modules</a>
                 </div>
                 <div class="hero-meta" aria-label="Open Academy summary">
-                    <span>Minimal front page</span>
-                    <span>Dedicated module destinations</span>
-                    <span>Open source learning system</span>
+                    <span>Static, fast-loading pages</span>
+                    <span>Open-source learning projects</span>
+                    <span>Module-specific experiences</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-grid">
+                    <article class="section-card">
+                        <h2>About Open Academy</h2>
+                        <p>
+                            Open Academy is a lightweight home page for practical learning modules. It is meant to help
+                            people discover focused technical courses without hiding the actual product behind generic
+                            landing-page copy. The goal is simple: keep the entry page clear, then send learners into
+                            the dedicated learning app for the subject they want to study.
+                        </p>
+                        <ul class="bullet-list">
+                            <li>The current focus is electronics and PCB design education.</li>
+                            <li>Modules are designed to be usable directly in the browser.</li>
+                            <li>Projects are open source and intended for continuous improvement.</li>
+                        </ul>
+                    </article>
+                    <aside class="section-card">
+                        <h2>Current scope</h2>
+                        <p>
+                            The live module today is a browser-based trainer for electronics, PCB layout, embedded
+                            hardware thinking, exercises, and real-world scenarios.
+                        </p>
+                        <div class="stat-grid" aria-label="PCB trainer highlights">
+                            <div class="stat-card">
+                                <strong>4</strong>
+                                <span>learning levels</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong>34</strong>
+                                <span>topics across the course</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong>84</strong>
+                                <span>interactive exercises</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong>34</strong>
+                                <span>practical scenarios</span>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
             </section>
 
             <section class="section" id="modules">
                 <div class="section-head">
                     <div>
-                        <h2>Available modules</h2>
+                        <h2>Available module</h2>
                     </div>
                     <p>
-                        Modules appear here as they go live. For now, the academy offers one active learning track.
+                        Open Academy currently links to one complete learning app with its own dedicated interface and
+                        browser-based progress tracking.
                     </p>
                 </div>
-
                 <div class="modules">
                     <article class="module-card">
                         <div>
@@ -453,8 +633,8 @@
                             <h3>Electronics and PCB Design Trainer</h3>
                             <p>
                                 A focused module for learning electronics, PCB design, structured lessons, exercises,
-                                and practical engineering thinking. This module is hosted separately at
-                                pcb.openacademy.space.
+                                and practical engineering thinking. The trainer is published separately at
+                                pcb.openacademy.space and is designed for direct browser use without accounts.
                             </p>
                             <div class="module-tags" aria-label="PCB module features">
                                 <span>Lessons</span>
@@ -467,25 +647,114 @@
                         <div class="module-side">
                             <div>
                                 <strong>PCB</strong>
-                                <span>The current live module in the academy system.</span>
+                                <span>The current live learning module in the academy system.</span>
                             </div>
                             <a class="button button-primary" href="https://pcb.openacademy.space/">Launch module</a>
                         </div>
                     </article>
+                </div>
+            </section>
 
-                    <aside class="coming-soon">
+            <section class="section">
+                <div class="section-head">
+                    <div>
+                        <h2>How the learning flow works</h2>
+                    </div>
+                    <p>
+                        The front page stays simple. The actual educational depth lives inside the module itself.
+                    </p>
+                </div>
+                <div class="card-grid">
+                    <article class="mini-card">
+                        <h3>Structured lessons</h3>
                         <p>
-                            More learning modules can be added here later without changing the role of this page. It
-                            remains the general directory for the academy.
+                            Modules are organized into levels and topics so learners can progress from foundations to
+                            more advanced technical material.
                         </p>
-                    </aside>
+                    </article>
+                    <article class="mini-card">
+                        <h3>Practice-driven</h3>
+                        <p>
+                            Exercises and scenarios are used to reinforce the material instead of stopping at static
+                            reading alone.
+                        </p>
+                    </article>
+                    <article class="mini-card">
+                        <h3>Browser-based</h3>
+                        <p>
+                            The current module runs as a static web app with local progress storage and no account
+                            requirement.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-head">
+                    <div>
+                        <h2>Common questions</h2>
+                    </div>
+                    <p>
+                        These are the basics of what is currently available through the academy.
+                    </p>
+                </div>
+                <div class="faq-grid">
+                    <article class="faq-item">
+                        <h3>What is live right now?</h3>
+                        <p>
+                            The active module is the Electronics and PCB Design Trainer at
+                            https://pcb.openacademy.space/.
+                        </p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Do I need an account?</h3>
+                        <p>
+                            No. The current module is static and stores learner progress locally in the browser.
+                        </p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Is the project open source?</h3>
+                        <p>
+                            Yes. The current module is published as an open-source project and linked from the site
+                            footer below.
+                        </p>
+                    </article>
+                    <article class="faq-item">
+                        <h3>Where can I send feedback?</h3>
+                        <p>
+                            Feedback and bug reports can be sent through the GitHub repository issues page.
+                        </p>
+                    </article>
                 </div>
             </section>
 
             <footer>
-                <div class="footer-row">
-                    <span>Open Academy is the general entry page. The PCB trainer lives at https://pcb.openacademy.space/.</span>
-                    <a href="https://pcb.openacademy.space/">Go to the PCB module</a>
+                <div class="footer-panel">
+                    <div class="footer-grid">
+                        <div class="footer-column">
+                            <h3>About</h3>
+                            <p>
+                                Open Academy is the public entry page for open technical learning modules, starting with
+                                the Electronics and PCB Design Trainer.
+                            </p>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Contact</h3>
+                            <a href="https://github.com/smnrdln/pcbtrainer" target="_blank"
+                                rel="noopener noreferrer">Project repository</a>
+                            <a href="https://github.com/smnrdln/pcbtrainer/issues" target="_blank"
+                                rel="noopener noreferrer">Report an issue</a>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Legal</h3>
+                            <a href="privacy.html">Privacy policy</a>
+                            <a href="https://pcb.openacademy.space/">PCB trainer</a>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        Open Academy is the general entry page. The live PCB module is published at
+                        https://pcb.openacademy.space/.
+                    </div>
                 </div>
             </footer>
         </div>
