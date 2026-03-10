@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Open Academy is a static front page for open technical learning modules. The current live module is the Electronics and PCB Design Trainer.">
-    <meta name="keywords" content="Open Academy, learning modules, PCB design, electronics, engineering education">
+        content="Free learning modules in tech, AI, electronics, robotics, and engineering with structured lessons, exercises, and real-world scenarios.">
+    <meta name="keywords" content="Open Academy Dot Space, free learning modules, tech learning, AI learning, electronics, robotics, engineering education">
     <meta name="author" content="Saman Ardalan">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="google-adsense-account" content="ca-pub-4757211359193207">
     <meta name="theme-color" content="#0b1220">
+    <link rel="icon" href="icon/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon/android-chrome-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="icon/android-chrome-512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="manifest" href="icon/site.webmanifest">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Open Academy">
+    <meta property="og:title" content="Open Academy Dot Space">
     <meta property="og:description"
-        content="Browse Open Academy learning modules and launch the live Electronics and PCB Design Trainer.">
-    <meta property="og:site_name" content="Open Academy">
-    <title>Open Academy</title>
+        content="Free learning modules in tech, AI, electronics, robotics, and engineering.">
+    <meta property="og:site_name" content="Open Academy Dot Space">
+    <title>Open Academy Dot Space</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4757211359193207"
         crossorigin="anonymous"></script>
     <style>
@@ -99,15 +106,21 @@
         .brand-mark {
             display: grid;
             place-items: center;
-            width: 46px;
-            height: 46px;
-            border-radius: 16px;
+            width: 120px;
+            height: 120px;
+            border-radius: 32px;
             background: linear-gradient(135deg, rgba(245, 158, 11, 0.28), rgba(56, 189, 248, 0.28));
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: var(--shadow);
             font-size: 1rem;
             font-weight: 700;
             letter-spacing: 0.08em;
+        }
+
+        .brand-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .brand-copy strong,
@@ -517,6 +530,12 @@
         }
 
         @media (max-width: 640px) {
+            .brand-mark {
+                width: 96px;
+                height: 96px;
+                border-radius: 26px;
+            }
+
             .hero h1 {
                 max-width: none;
                 font-size: clamp(2.3rem, 13vw, 3.8rem);
@@ -540,59 +559,63 @@
 <body>
     <header class="site-header">
         <div class="shell">
-            <a class="brand" href="#top" aria-label="Open Academy home">
-                <div class="brand-mark">OA</div>
+            <a class="brand" href="#top" aria-label="Open Academy Dot Space home">
+                <div class="brand-mark">
+                    <img src="logo/oads-transparent-256.png"
+                        srcset="logo/oads-transparent-256.png 1x, logo/oads-transparent-512.png 2x"
+                        alt="Open Academy Dot Space logo" width="120" height="120">
+                </div>
                 <div class="brand-copy">
-                    <strong>Open Academy</strong>
-                    <span>Technical learning modules</span>
+                    <strong>Open Academy Dot Space</strong>
+                    <span>Free technical learning</span>
                 </div>
             </a>
-            <div class="status">1 live module</div>
+            <div class="status">Free modules</div>
         </div>
     </header>
 
     <main id="top">
         <div class="shell">
-            <section class="hero" aria-label="Open Academy overview">
+            <section class="hero" aria-label="Open Academy Dot Space overview">
                 <div class="eyebrow">Open technical learning</div>
-                <h1>Learn through real modules, not marketing pages.</h1>
+                <h1>Free learning modules for tech, AI, electronics, robotics.</h1>
                 <p>
-                    Open Academy is a static front page for open learning modules in electronics and engineering. Each
-                    module is published as its own focused experience. The current live module is the Electronics and
-                    PCB Design Trainer.
+                    Open Academy Dot Space offers free learning modules across technology and engineering, including
+                    AI, electronics, robotics, and practical software topics. Each module blends structured lessons,
+                    hands-on exercises, and real-world scenarios.
                 </p>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="https://pcb.openacademy.space/">Open the PCB trainer</a>
-                    <a class="button button-secondary" href="#modules">Browse modules</a>
+                    <a class="button button-primary" href="#modules">View current modules</a>
+                    <a class="button button-secondary" href="https://pcb.openacademy.space/">Open the PCB trainer</a>
                 </div>
-                <div class="hero-meta" aria-label="Open Academy summary">
-                    <span>Static, fast-loading pages</span>
-                    <span>Open-source learning projects</span>
-                    <span>Module-specific experiences</span>
+                <div class="hero-meta" aria-label="Open Academy Dot Space summary">
+                    <span>Free modules</span>
+                    <span>Hands-on practice</span>
+                    <span>Real-world scenarios</span>
                 </div>
             </section>
 
             <section class="section">
                 <div class="section-grid">
                     <article class="section-card">
-                        <h2>About Open Academy</h2>
+                        <h2>About Open Academy Dot Space</h2>
                         <p>
-                            Open Academy is a lightweight home page for practical learning modules. It is meant to help
-                            people discover focused technical courses without hiding the actual product behind generic
-                            landing-page copy. The goal is simple: keep the entry page clear, then send learners into
-                            the dedicated learning app for the subject they want to study.
+                            Open Academy Dot Space provides free, practical learning modules across technology and
+                            engineering. Topics include AI, electronics, robotics, software, and hardware design.
+                            Lessons are designed to be applied, with exercises and scenarios that build real-world
+                            problem-solving skills.
                         </p>
                         <ul class="bullet-list">
-                            <li>The current focus is electronics and PCB design education.</li>
-                            <li>Modules are designed to be usable directly in the browser.</li>
-                            <li>Projects are open source and intended for continuous improvement.</li>
+                            <li>Free modules across tech, AI, electronics, and robotics.</li>
+                            <li>Browser-based lessons and practice.</li>
+                            <li>Open-source learning projects.</li>
                         </ul>
                     </article>
                     <aside class="section-card">
-                        <h2>Current scope</h2>
+                        <h2>Current focus</h2>
                         <p>
-                            The live module today is a browser-based trainer for electronics, PCB layout, embedded
-                            hardware thinking, exercises, and real-world scenarios.
+                            The current module is the Electronics and PCB Design Trainer, covering electronics
+                            fundamentals, PCB layout, embedded hardware thinking, exercises, and real-world scenarios.
                         </p>
                         <div class="stat-grid" aria-label="PCB trainer highlights">
                             <div class="stat-card">
@@ -619,22 +642,21 @@
             <section class="section" id="modules">
                 <div class="section-head">
                     <div>
-                        <h2>Available module</h2>
+                        <h2>Current modules</h2>
                     </div>
                     <p>
-                        Open Academy currently links to one complete learning app with its own dedicated interface and
-                        browser-based progress tracking.
+                        Each module is a focused learning experience with lessons, exercises, and scenarios.
                     </p>
                 </div>
                 <div class="modules">
                     <article class="module-card">
                         <div>
-                            <div class="module-kicker">Available now</div>
+                            <div class="module-kicker">Featured</div>
                             <h3>Electronics and PCB Design Trainer</h3>
                             <p>
-                                A focused module for learning electronics, PCB design, structured lessons, exercises,
-                                and practical engineering thinking. The trainer is published separately at
-                                pcb.openacademy.space and is designed for direct browser use without accounts.
+                                A focused program for learning electronics, PCB design, structured lessons, exercises,
+                                and practical engineering thinking. Learn directly in the browser at
+                                pcb.openacademy.space.
                             </p>
                             <div class="module-tags" aria-label="PCB module features">
                                 <span>Lessons</span>
@@ -647,9 +669,9 @@
                         <div class="module-side">
                             <div>
                                 <strong>PCB</strong>
-                                <span>The current live learning module in the academy system.</span>
+                                <span>Electronics and PCB design learning program.</span>
                             </div>
-                            <a class="button button-primary" href="https://pcb.openacademy.space/">Launch module</a>
+                            <a class="button button-primary" href="https://pcb.openacademy.space/">Open module</a>
                         </div>
                     </article>
                 </div>
@@ -661,7 +683,7 @@
                         <h2>How the learning flow works</h2>
                     </div>
                     <p>
-                        The front page stays simple. The actual educational depth lives inside the module itself.
+                        The learning flow blends structured lessons with hands-on practice and scenarios.
                     </p>
                 </div>
                 <div class="card-grid">
@@ -682,8 +704,7 @@
                     <article class="mini-card">
                         <h3>Browser-based</h3>
                         <p>
-                            The current module runs as a static web app with local progress storage and no account
-                            requirement.
+                            Progress is stored locally in your browser so you can pick up where you left off.
                         </p>
                     </article>
                 </div>
@@ -695,28 +716,27 @@
                         <h2>Common questions</h2>
                     </div>
                     <p>
-                        These are the basics of what is currently available through the academy.
+                        Quick answers about the learning experience.
                     </p>
                 </div>
                 <div class="faq-grid">
                     <article class="faq-item">
-                        <h3>What is live right now?</h3>
+                        <h3>What will I learn?</h3>
                         <p>
-                            The active module is the Electronics and PCB Design Trainer at
-                            https://pcb.openacademy.space/.
+                            Topics across tech, AI, electronics, robotics, and engineering, with the current module
+                            focused on electronics and PCB design.
                         </p>
                     </article>
                     <article class="faq-item">
                         <h3>Do I need an account?</h3>
                         <p>
-                            No. The current module is static and stores learner progress locally in the browser.
+                            No. Progress is stored locally in your browser.
                         </p>
                     </article>
                     <article class="faq-item">
                         <h3>Is the project open source?</h3>
                         <p>
-                            Yes. The current module is published as an open-source project and linked from the site
-                            footer below.
+                            Yes. The trainer source is available in the project repository below.
                         </p>
                     </article>
                     <article class="faq-item">
@@ -734,8 +754,8 @@
                         <div class="footer-column">
                             <h3>About</h3>
                             <p>
-                                Open Academy is the public entry page for open technical learning modules, starting with
-                                the Electronics and PCB Design Trainer.
+                                Open Academy Dot Space provides hands-on electronics and PCB design learning with
+                                structured lessons, exercises, and scenarios.
                             </p>
                         </div>
                         <div class="footer-column">
@@ -752,8 +772,7 @@
                         </div>
                     </div>
                     <div class="footer-bottom">
-                        Open Academy is the general entry page. The live PCB module is published at
-                        https://pcb.openacademy.space/.
+                        Electronics and PCB Design Trainer: https://pcb.openacademy.space/.
                     </div>
                 </div>
             </footer>
